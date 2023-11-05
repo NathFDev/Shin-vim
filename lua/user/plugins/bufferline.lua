@@ -10,7 +10,8 @@ return {
 	},
 	config = function(_, opts)
 		require("bufferline").setup(opts)
-
+	end,
+	init = function()
 		local keymap = vim.keymap
 
 		keymap.set("n", "<Tab>", "<cmd>BufferLineCycleNext<CR>", { desc = "Cycle to Next buffer" })

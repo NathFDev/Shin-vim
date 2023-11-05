@@ -11,15 +11,40 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({{ import = "user.plugins" }}, {
+require("lazy").setup("user.plugins", {
 	install = {
 		colorscheme = { "tokyonight" },
 	},
+	defaults = { lazy = true },
 	checker = {
 		enabled = true,
 		notify = false,
 	},
 	change_detection = {
 		notify = false,
+	},
+	performance = {
+		rtp = {
+			disabled_plugins = {
+				"netrw",
+				"netrwPlugin",
+				"netrwSettings",
+				"netrwFileHandlers",
+				"gzip",
+				"zip",
+				"zipPlugin",
+				"tar",
+				"tarPlugin",
+				"getscript",
+				"getscriptPlugin",
+				"vimball",
+				"vimballPlugin",
+				"2html_plugin",
+				"logipat",
+				"rrhelper",
+				"spellfile_plugin",
+				"matchit",
+			},
+		},
 	},
 })

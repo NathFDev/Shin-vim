@@ -1,12 +1,25 @@
 local opt = vim.opt
 
--- Statusline
+-- UI
 opt.laststatus = 3 -- global statusline
 opt.showmode = false
+opt.cursorline = true
+opt.mouse = "a"
+opt.list = true
+opt.listchars = {
+	tab = "❘-",
+	trail = "·",
+	lead = "·",
+	extends = "»",
+	precedes = "«",
+	nbsp = "×",
+}
+opt.sidescrolloff = 3
+opt.wrap = false
+opt.fileencoding = "utf-8"
 
 -- Clipboard
 opt.clipboard = "unnamedplus"
-opt.cursorline = true
 
 -- Timeoutlen
 opt.timeoutlen = 100
@@ -18,40 +31,58 @@ opt.number = true
 -- isfname
 opt.isfname:append("@-@")
 
+-- Column
+opt.textwidth = 80
+opt.colorcolumn = "80"
+
 -- Tab
 opt.tabstop = 2
 opt.shiftwidth = 2
 opt.softtabstop = 2
 opt.expandtab = true
-
--- Column
-opt.textwidth = 80
-opt.colorcolumn = "80"
-opt.wrap = true
-
--- Indent
+opt.autoindent = true
 opt.smartindent = true
 opt.fillchars = { eob = " " }
-opt.ignorecase = true
-opt.smartcase = true
 
 -- Search
-opt.hlsearch = false
+opt.hlsearch = true
 opt.incsearch = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.wildignore = opt.wildignore + { "*/node_modules/*", "*/.git/*", "*/vendor/*" }
+opt.wildmenu = true
+
+-- autocomplete
+opt.completeopt = { "menu", "menuone", "noselect" }
+opt.shortmess = opt.shortmess + { c = true }
 
 -- Term
 opt.signcolumn = "yes"
 opt.splitbelow = true
 opt.splitright = true
-opt.termguicolors = true
-opt.timeoutlen = 100
 
 -- Scroll
-opt.scrolloff = 8
+opt.scrolloff = 10
+opt.sidescrolloff = 3
 
--- Update time
+-- perfomance
+opt.redrawtime = 1500
+opt.timeoutlen = 200
+opt.ttimeoutlen = 10
 opt.updatetime = 100
 
--- Swap file
+-- theme
+opt.termguicolors = true
+
+-- backups
+opt.backup = false
 opt.swapfile = false
+opt.writebackup = false
 opt.undofile = true
+
+-- misc
+opt.backspace = { "eol", "start", "indent" }
+opt.clipboard = "unnamedplus"
+opt.encoding = "utf-8"
+opt.matchpairs = { "(:)", "{:}", "[:]", "<:>" }
+opt.syntax = "enable"

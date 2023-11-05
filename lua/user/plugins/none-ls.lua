@@ -21,9 +21,9 @@ return {
 				"golines", -- go formatter
 				"goimports-reviser", -- go formatter
 				"gospel", -- go linter
-				"eslint_d", -- js linter
+				"eslint", -- js linter
 				"mypy", -- python linter
-				"ruffle", -- python formatter
+				"ruff", -- python formatter
 				"eslint", -- js linter
 			},
 		})
