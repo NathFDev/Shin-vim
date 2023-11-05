@@ -19,11 +19,6 @@ map("i", "<A-k>", "<Up>", { desc = "Move up" })
 -- clear highlights
 map("n", "<Esc>", "<cmd> noh <CR>", { desc = "Clear highlights" })
 
--- Formatting
-map("n", "<leader>fm", function()
-	vim.lsp.buf.format({ async = true })
-end, { desc = "LSP formatting" })
-
 -- window management
 map("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" }) -- split window vertically
 map("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" }) -- split window horizontally
@@ -85,7 +80,8 @@ map("v", "<leader>y", '"+y', { desc = "Yank selection to system clipboard" })
 map("x", "<leader>p", [["_dP]])
 
 -- Delete without yanking
-map({ "n", "v" }, "<leader>dx", [["_d]])
+map("n", "<leader>dx", [["_d]])
+map("v", "<leader>dx", [["_d]])
 
 -- Escape
 map("i", "<C-c>", "<Esc>")

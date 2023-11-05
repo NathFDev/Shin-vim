@@ -1,8 +1,8 @@
 return {
-	"echasnovski/mini.surround",
+	"echasnovski/mini.comment",
 	version = false,
   event = "InsertEnter",
 	config = function()
-		require("mini.surround").setup()
+		require("mini.comment").setup()
 	end,
 }
