@@ -5,6 +5,6 @@ return {
 	},
 	keys = {
 		{ "<C-m>", "<cmd>lua require('harpoon.mark').add_file<CR>", { desc = "Mark files" } },
+	  { "<leader>hu", "<cmd>lua harpoon_ui.toggle_quick_menu<CR>", { desc = "Toggle Harpoon UI" } },
 	},
-	{ "<leader>hu", "<cmd>lua harpoon_ui.toggle_quick_menu<CR>", { desc = "Mark files" } },
 }

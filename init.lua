@@ -1,4 +1,4 @@
-vim.g.leaderkey = " "
+vim.g.mapleader = " "
 
-require("lazy")
-require("core")
+require("user.lazy")
+require("user.core")
