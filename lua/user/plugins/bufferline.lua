@@ -1,10 +1,12 @@
 return {
 	"akinsho/bufferline.nvim",
+	lazy = false,
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 	version = "*",
 	opts = {
 		options = {
 			mode = "tabs",
+			style = "thick",
 			diagnostics = "nvim_lsp",
 		},
 	},

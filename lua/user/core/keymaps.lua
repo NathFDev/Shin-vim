@@ -1,4 +1,4 @@
-function map(mode, lhs, rhs, opts)
+local map = function(mode, lhs, rhs, opts)
 	local options = { noremap = true }
 	if opts then
 		options = vim.tbl_extend("force", options, opts)
@@ -30,12 +30,6 @@ map("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" }) -- c
 map("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 map("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 map("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
-
--- switch between windows
-map("n", "<C-h>", "<C-w>h", { desc = "Window left" })
-map("n", "<C-l>", "<C-w>l", { desc = "Window right" })
-map("n", "<C-j>", "<C-w>j", { desc = "Window down" })
-map("n", "<C-k>", "<C-w>k", { desc = "Window up" })
 
 -- Buffer Navigation
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll down half a page and center the cursor" })
